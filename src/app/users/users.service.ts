@@ -1,12 +1,9 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-
-interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
+import { User } from './users.interface';
 
 @Injectable()
 export class UsersService {
